@@ -55,16 +55,19 @@ while (true)
     }
     else if (option == "4")
     {
-        for (int n = 0; n < 1;)
+        int rollCount = 0;
+        while (true)
         {
             int dice1 = rnd.Next(1, 7);
             int dice2 = rnd.Next(1, 7);
             int sum = dice1 + dice2;
-
             Console.WriteLine($"{dice1}, {dice2} (sum: {sum})");
+            rollCount++;
+
             if (sum == 2)
             {
-                n++;
+                Console.WriteLine($"Snake eyes! It took {rollCount} rolls to get snake eyes.");
+                break;
             }
         }
     }

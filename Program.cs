@@ -44,13 +44,14 @@ while (true)
     else if (option == "3")
     {
         Console.Write("\nHow many rolls would you like? ");
-            int number = Convert.ToInt16(Console.ReadLine());
-            for (int n = 0; n < number; n++) {
-                int dice1 = rnd.Next(1, 7);
-                int dice2 = rnd.Next(1, 7);
-                int sum = dice1 + dice2;
-                Console.WriteLine($"{dice1}, {dice2} (sum: {sum})");
-            }
+        int number = Convert.ToInt16(Console.ReadLine());
+        for (int n = 0; n < number; n++)
+        {
+            int dice1 = rnd.Next(1, 7);
+            int dice2 = rnd.Next(1, 7);
+            int sum = dice1 + dice2;
+            Console.WriteLine($"{dice1}, {dice2} (sum: {sum})");
+        }
     }
     else if (option == "4")
     {
@@ -59,6 +60,7 @@ while (true)
             int dice1 = rnd.Next(1, 7);
             int dice2 = rnd.Next(1, 7);
             int sum = dice1 + dice2;
+
             Console.WriteLine($"{dice1}, {dice2} (sum: {sum})");
             if (sum == 2)
             {
